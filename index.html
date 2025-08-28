@@ -1035,6 +1035,117 @@
         font-size: 2rem;
       }
     }
+
+    /* Team Section */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.team-member {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.member-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.team-member:hover .member-social {
+  opacity: 1;
+}
+
+.member-social a {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.member-social a:hover {
+  transform: translateY(-3px);
+  background: var(--white);
+}
+
+.member-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.member-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.member-bio {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Make nav-cta show nicely on small screens */
+@media (max-width: 992px) {
+  .nav-cta {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-cta.btn-primary {
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 
@@ -1056,8 +1167,9 @@
           <li><a href="#vision">Mission</a></li>
           <li><a href="#initiatives">Initiatives</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#donate" class="btn-primary">Donate Now</a></li>
+          <li><a href="#donate" class="btn-primary nav-cta">Donate Now</a></li>
         </ul>
         <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
       </nav>
@@ -1065,37 +1177,7 @@
   </header>
 
 
-  <!-- Hero Section -->
-  <!-- <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-subtitle">YOUTH-LED SOCIAL IMPACT</div>
-        <h1 class="hero-title">Small Acts, <span class="highlight">Big Impact</span></h1>
-        <p class="hero-description">When youth lead, communities thrive. We mobilize young changemakers to create
-          sustainable impact through education, healthcare, environmental initiatives, and community development.</p>
-
-        <div class="hero-buttons">
-          <a href="#volunteer" class="btn btn-primary">Join Our Movement</a>
-          <a href="#projects" class="btn btn-secondary">Explore Projects</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-number" data-count="45">0</div>
-            <div class="hero-stat-text">Communities Served</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number" data-count="5000">0</div>
-            <div class="hero-stat-text">Lives Impacted</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-number" data-count="250">0</div>
-            <div class="hero-stat-text">Active Volunteers</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  
 
 
   <section class="hero">
@@ -1107,7 +1189,7 @@
   <div class="container">
     <div class="hero-content">
       <div class="hero-subtitle">YOUTH-LED SOCIAL IMPACT</div>
-      <h1 class="hero-title">Small Acts, <span class="highlight">Big Impact</span></h1>
+      <h1 class="hero-title" style="color: #ffd428;">Small Acts, <span class="highlight">Big Impact</span></h1>
       <p class="hero-description">When youth lead, communities thrive. We mobilize young changemakers to create
         sustainable impact through education, healthcare, environmental initiatives, and community development.</p>
 
@@ -1380,6 +1462,132 @@
     </div>
   </section>
 
+  <!-- Add this section after the Initiatives section or wherever you prefer -->
+
+<!-- Team Section -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Team</h2>
+      <p>Meet the passionate youth leaders driving change at Aarohana Foundation</p>
+    </div>
+
+    <div class="team-container">
+      <div class="team-member">
+        <div class="member-image">
+          <img src="team/Mohammad Rayeed Zain.jpg" alt="Mohammad Rayeed Zain">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Mohammed Rayeed Zain</h3>
+          <p class="member-role">Founder</p>
+          <p class="member-bio">Passionate about community development and youth empowerment with 5+ years of experience in social work.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="team/Ankith.jpg" alt="Ankith Pawal Kujur">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Ankith Pawal Kujur</h3>
+          <p class="member-role">Co-Founder</p>
+          <p class="member-bio">Education activist focused on creating equal learning opportunities for underprivileged children.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="team/Andrew Joannes.jpg" alt="Andrew Joannes">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Andrew Joannes</h3>
+          <p class="member-role">Project Lead - Environment</p>
+          <p class="member-bio">Environmental science graduate leading our green initiatives and sustainability projects.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Neha Gupta">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Eman Syed</h3>
+          <p class="member-role">Healthcare Coordinator</p>
+          <p class="member-bio">Medical student dedicated to improving healthcare access in marginalized communities.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Neha Gupta">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Nimisha</h3>
+          <p class="member-role">Healthcare Coordinator</p>
+          <p class="member-bio">Medical student dedicated to improving healthcare access in marginalized communities.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Neha Gupta">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Srihari</h3>
+          <p class="member-role">Healthcare Coordinator</p>
+          <p class="member-bio">Medical student dedicated to improving healthcare access in marginalized communities.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Neha Gupta">
+          <div class="member-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="member-info">
+          <h3>Keno</h3>
+          <p class="member-role">Healthcare Coordinator</p>
+          <p class="member-bio">Medical student dedicated to improving healthcare access in marginalized communities.</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="#team" class="btn btn-primary">Meet Our Full Team</a>
+    </div>
+  </div>
+</section>
   <!-- Contact Section -->
   <section id="contact" class="section contact">
     <div class="container">
@@ -1476,9 +1684,10 @@
           <ul class="footer-links">
             <li><a href="#about">About Us</a></li>
             <li><a href="#vision">Our Vision</a></li>
-            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#vision">Our Mission</a></li>
             <li><a href="#initiatives">Initiatives</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
@@ -1585,21 +1794,27 @@
     observer.observe(document.querySelector('.hero-stats'));
 
     // Project filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
-        btn.classList.add('active');
+   
 
-        // Here you would normally filter the projects
-        // For this example, we're just showing a simple alert
-        console.log('Filtering by: ' + btn.textContent);
+    const filterBtns = document.querySelectorAll('.filter-btn');
+  const projects = document.querySelectorAll('.project-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const category = btn.textContent.toLowerCase();
+      projects.forEach(project => {
+        if(category === 'all' || project.querySelector('.project-category').textContent.toLowerCase() === category) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
       });
     });
+  });
   </script>
 </body>
-
 
 </html>
